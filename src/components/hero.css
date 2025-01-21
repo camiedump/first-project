@@ -1,0 +1,82 @@
+
+body{
+  background-color: #0b090a;
+}
+
+.Nav{
+  top: 0;
+  background-color: transparent;
+  height: 5.2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+a{
+  color: #d3d3d3;
+  margin: 1.5rem; 
+  padding-right: 3rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: text-decoration 0.3s;
+}
+a:hover{
+  text-decoration: underline;
+  color: #a4161a;
+}
+
+
+h1{
+  font-size: 3.5rem;
+  margin-top: 2rem;
+}
+
+h3{
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.description-container{
+  width: 35rem;
+  text-align: justify;
+}
+
+.details-container{
+  color: #d3d3d3;
+  margin-top: 6rem;
+  margin-left: 9rem;
+  display: flex;
+  justify-content:space-between;
+  height: 26rem;
+}
+
+.img-container{
+  width: 40rem;
+  height: 30rem;
+}
+
+img{
+  height: 30rem;
+  width: 24rem;
+  justify-content: space-between;
+  display: flex;
+  margin-right: 14rem;
+  margin-bottom: 15rem;
+}
+
+.logo-container{
+  display: flex;
+  width: 20rem;
+  margin-left: 0;
+  bottom: 5rem;
+}
+
+.logo{
+  width: 3rem;
+  height: 2rem;
+}
+
+.logo-react{
+  width: 4rem;
+  height: auto;
+
+}
