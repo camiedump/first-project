@@ -1,5 +1,4 @@
 import './hero.css'
-import { Link } from 'react-router-dom'
 import myimage from "../assets/moon.png";
 
 export default function Hero(){
