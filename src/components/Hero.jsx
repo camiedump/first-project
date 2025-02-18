@@ -1,7 +1,7 @@
 import './hero.css'
 import myimage from "../assets/moon.png";
 
-export default function hero(){
+export default function Hero(){
   return(
    <>
     <div className='details-container'>
