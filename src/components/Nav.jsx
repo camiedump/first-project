@@ -1,14 +1,17 @@
+import { Link } from "react-router-dom"
+import './hero.css'
 
 export default function Nav(){
   return(
-    <div className="Nav">
-      <a href="">Home</a> 
-      <a href="">About Me</a> 
-      <a href="">Contact</a> 
-    </div>
+   <>
+<nav className="Nav">
+<li>
+ <Link to="/" className='nav-link'>Home</Link> 
+</li>
+<li>
+  <Link to="/about-me" className='nav-link'>About Me</Link> 
+</li>  
+</nav>
+</>
   )
-
-  
-
-
 }

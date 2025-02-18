@@ -6,12 +6,13 @@ body{
 .Nav{
   top: 0;
   background-color: transparent;
-  height: 5.2rem;
+  height: 5rem;
   display: flex;
   justify-content: flex-end;
 }
 
-a{
+li{
+  list-style: none;
   color: #d3d3d3;
   margin: 1.5rem; 
   padding-right: 3rem;
@@ -19,7 +20,18 @@ a{
   text-decoration: none;
   transition: text-decoration 0.3s;
 }
-a:hover{
+li:hover{
+  text-decoration: underline;
+  color: #a4161a;
+}
+
+.nav-link {
+  color: #d3d3d3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
   text-decoration: underline;
   color: #a4161a;
 }
@@ -55,12 +67,12 @@ h3{
 }
 
 img{
-  height: 30rem;
-  width: 24rem;
+  height: auto;
+  width: 35rem;
   justify-content: space-between;
   display: flex;
   margin-right: 14rem;
-  margin-bottom: 15rem;
+ 
 }
 
 .logo-container{

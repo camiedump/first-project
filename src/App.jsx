@@ -1,16 +1,18 @@
-import Hero from './components/hero'
-import Nav from './components/Nav'
-import Details from './components/details'
-
+import Hero from "./components/hero";
+import About from "./components/about-me";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Nav from "./components/Nav";
 
 function App() {
   return (
-    <>
-    <Hero/>
-    <Nav/>
-    <Details/>
-    </>
-  )
+    <BrowserRouter>
+        <Nav/>
+      <Routes>
+        <Route path="/" element={<Hero/>}/>
+        <Route path="/about-me" element={<About/>}/>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App
