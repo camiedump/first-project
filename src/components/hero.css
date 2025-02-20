@@ -1,26 +1,30 @@
-
-body{
+body {
   background-color: #0b090a;
+  margin: 0;
+  padding: 0;
 }
 
-.Nav{
+
+.Nav {
   top: 0;
   background-color: transparent;
   height: 5rem;
   display: flex;
   justify-content: flex-end;
+  padding: 0 1rem;
 }
 
-li{
+li {
   list-style: none;
   color: #d3d3d3;
-  margin: 1.5rem; 
+  margin: 1.5rem;
   padding-right: 3rem;
   cursor: pointer;
   text-decoration: none;
   transition: text-decoration 0.3s;
 }
-li:hover{
+
+li:hover {
   text-decoration: underline;
   color: #a4161a;
 }
@@ -36,59 +40,128 @@ li:hover{
   color: #a4161a;
 }
 
+span{
+ color: #a4161a;
+}
 
-h1{
+
+h1 {
   font-size: 3.5rem;
   margin-top: 2rem;
 }
 
-h3{
+h3 {
   font-size: 1.5rem;
   margin-top: 1rem;
 }
 
-.description-container{
+.description-container {
   width: 35rem;
   text-align: justify;
 }
 
-.details-container{
+
+.details-container {
   color: #d3d3d3;
-  margin-top: 6rem;
+  margin-top: 7rem;
   margin-left: 9rem;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   height: 26rem;
 }
 
-.img-container{
+.des{
+  margin-top: 5rem;
+}
+
+.img-container {
   width: 40rem;
   height: 30rem;
+  align-self: flex-start;
+  margin-top: -5rem;
 }
 
-img{
+img {
   height: auto;
   width: 35rem;
-  justify-content: space-between;
-  display: flex;
+  display: block;
   margin-right: 14rem;
- 
+  
 }
 
-.logo-container{
+.logo-container {
   display: flex;
   width: 20rem;
   margin-left: 0;
   bottom: 5rem;
 }
 
-.logo{
+.logo {
   width: 3rem;
   height: 2rem;
 }
 
-.logo-react{
+.logo-react {
   width: 4rem;
   height: auto;
+}
 
+/* Responsive Adjustments */
+@media (max-width: 64rem) {
+  .details-container {
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem auto 0;
+    height: auto;
+    padding: 0 1rem;
+  }
+
+  .description-container,
+  .img-container {
+    width: 100%;
+    max-width: 35rem;
+    margin: 0 auto;
+  }
+
+  img {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .Nav {
+    justify-content: center;
+  }
+
+  li {
+    margin: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 37.5rem) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .Nav {
+    height: 4rem;
+  }
+
+  li {
+    margin: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .logo-container {
+    width: 15rem;
+  }
+
+  .logo,
+  .logo-react {
+    width: 2.5rem;
+  }
 }

@@ -6,7 +6,7 @@ export default function Hero(){
    <>
     <div className='details-container'>
     <div className='des'>
-      <h1> Hello there, I'm Camille</h1>
+      <h1> Hello there, <span>I'm Camille</span></h1>
       <div className='description-container'>
       <h3> I am an aspiring web designer with a passion for creating visually appealing, user-friendly,
            and functional websites that deliver a seamless online experience.</h3>
