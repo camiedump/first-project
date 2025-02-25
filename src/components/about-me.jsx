@@ -14,9 +14,9 @@ export default function About() {
 
       {}
       <div className="about-text">
-        <h1>About</h1>
+        <h1>About Me</h1>
         <p>
-          Hello! I'm <strong>Camille</strong>, a passionate web designer dedicated to crafting 
+          Hello! I'm <strong>Rosa Camille Labial</strong>, a passionate web designer dedicated to crafting 
           visually stunning and user-friendly websites. My love for technology and creativity 
           drives me to design seamless digital experiences.
         </p>

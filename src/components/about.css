@@ -1,12 +1,52 @@
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+body {
+  background-color: #0b090a;
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 .about-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh;
   padding: 50px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeIn 1s ease-out forwards;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-image {
+  margin-left: 2rem; 
+  display: flex;
+  justify-content: center;
+}
 
 .about-image img {
   width:25rem;
@@ -14,31 +54,71 @@
   border-radius: 10px;
   object-fit: cover;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.5s ease-out forwards;
+  animation: fadeIn 1.5s ease-out forwards, glow 1.5s infinite alternate ease-in-out;
+  border: 3px solid #a4161a;
 }
 
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(164, 22, 26, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(164, 22, 26, 1), 0 0 30px rgba(164, 22, 26, 0.8);
+  }
+}
 
 .about-text {
   max-width: 60rem;
   height: auto;
   margin-left: 15px;
+  flex: 1;
+  margin-right: 2rem;
 }
 
 .about-text h1 {
   font-size: 64px;
   margin-bottom: 20px;
-  color:#d3d3d3;
+  color:#a4161a;
 }
 
 .about-text p {
-  font-size: 20px;
+  font-size: 25px;
   line-height: 1.6;
   color: #d3d3d3;
+  text-align: justify;
+  padding-right: 1rem;
 }
 
+strong{
+  color: #a4161a;
+}
 
-.social-icons {
-  margin-top: 20px;
-  
+.logo-container {
+  display: flex;
+  gap: 1rem; 
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.logo {
+  width: 3rem;
+  height: 2rem;
+}
+
+.logo-react {
+  width: 4rem;
+  height: auto;
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (max-width: 768px) {
@@ -56,3 +136,8 @@
     margin-left: 0;
   }
 }
+
+.logo-container {
+  gap: 0.5rem;
+}
+
