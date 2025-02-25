@@ -2,16 +2,37 @@ body {
   background-color: #0b090a;
   margin: 0;
   padding: 0;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+section .home{
+  height: auto;
+  width: 100vh;
 }
 
 
+
 .Nav {
+  width: 100%;
+  left: 0;
   top: 0;
   background-color: transparent;
   height: 5rem;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
   padding: 0 1rem;
+  position: fixed;
+  z-index: 1000;
 }
 
 li {
@@ -40,19 +61,58 @@ li:hover {
   color: #a4161a;
 }
 
-span{
- color: #a4161a;
-}
-
-
 h1 {
   font-size: 3.5rem;
   margin-top: 2rem;
+  color: #d3d3d3;
+  display: flex;
+  align-items: center; 
+}
+
+h1 span {
+  display: inline-block;
+  color: #a4161a;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #d3d3d3;
+  animation: typing 2.5s steps(12, end) forwards, blink 1.5s infinite;
+  margin-left: 0.5rem;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 18rem; 
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 
 h3 {
   font-size: 1.5rem;
   margin-top: 1rem;
+}
+
+h1, h3 {
+  opacity: 0;
+  animation: textFade 1.5s ease-in-out forwards;
+}
+
+@keyframes textFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .description-container {
@@ -68,6 +128,18 @@ h3 {
   display: flex;
   justify-content: space-between;
   height: 26rem;
+  animation: slideIn 1.5s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .des{
@@ -79,6 +151,16 @@ h3 {
   height: 30rem;
   align-self: flex-start;
   margin-top: -5rem;
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 img {
@@ -86,27 +168,13 @@ img {
   width: 35rem;
   display: block;
   margin-right: 14rem;
-  
+  transition: transform 0.5s ease; 
 }
 
-.logo-container {
-  display: flex;
-  width: 20rem;
-  margin-left: 0;
-  bottom: 5rem;
+img:hover {
+  transform: scale(1.05);
 }
 
-.logo {
-  width: 3rem;
-  height: 2rem;
-}
-
-.logo-react {
-  width: 4rem;
-  height: auto;
-}
-
-/* Responsive Adjustments */
 @media (max-width: 64rem) {
   .details-container {
     flex-direction: column;
