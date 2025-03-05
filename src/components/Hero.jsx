@@ -4,7 +4,6 @@ import myimage from "../assets/moon.png";
 export default function Hero(){
   return(
    <>
-   <section id='home'>
     <div className='details-container'>
     <div className='des'>
       <h1> Hello there, <span class='wave-effect'>I'm Camille</span></h1>
@@ -17,11 +16,8 @@ export default function Hero(){
       <img src={myimage} alt="" />
     </div>
    </div>
-   </section>
 
-   <section id='about-me'>
-
-   </section>
+ 
   
    </>
     
