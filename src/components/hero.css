@@ -19,7 +19,19 @@ section .home{
   width: 100vh;
 }
 
-
+.nav-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 1000;
+}
 
 .Nav {
   width: 100%;
@@ -50,6 +62,12 @@ li:hover {
   color: #a4161a;
 }
 
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
 .nav-link {
   color: #d3d3d3;
   text-decoration: none;
@@ -59,6 +77,44 @@ li:hover {
 .nav-link:hover {
   text-decoration: underline;
   color: #a4161a;
+}
+
+.burger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #d3d3d3;
+  font-size: 1.8rem;
+  display: none; 
+}
+
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block; 
+  }
+
+
+.nav-links {
+  position: absolute;
+  top: 5rem;
+  left: 0;
+  width: 100%;
+  background-color: #0b090a;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 1rem;
+  transform: translateY(-200%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links.open {
+  transform: translateY(0);
+}
+
+.nav-links.closed {
+  transform: translateY(-200%);
+}
 }
 
 h1 {
@@ -123,7 +179,7 @@ h1, h3 {
 
 .details-container {
   color: #d3d3d3;
-  margin-top: 7rem;
+  margin-top: 10rem;
   margin-left: 9rem;
   display: flex;
   justify-content: space-between;
